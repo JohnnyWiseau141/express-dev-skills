@@ -11,7 +11,7 @@ const find = (conditions, callback) => {
     if (!(conditions instanceof Object)){
       throw new TypeError('Please pass in an object')
     }
-    // If the object is empty, return all the todos
+    // If the object is empty, return all the skills
     if (Object.keys(conditions).length === 0) return callback(null, skills)
 	// deal with errors
   } catch (error) {

@@ -19,6 +19,12 @@ app.set(
 )
 app.set('view engine', 'ejs')
 
+app.use(function(req, res, next) {
+  console.log('Hello There General Grevious! It is I, Sir Obi-Wan!');
+  req.time = new Date().toLocaleTimeString();
+  next();
+});
+
 // middleware
 app.use(logger('dev'))
 app.use(express.json())
